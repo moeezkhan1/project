@@ -1,0 +1,45 @@
+/* Footer.css */
+.footer {
+    background-color: #f7f7f7; /* Light gray background */
+    color: #333; /* Dark text for contrast */
+    text-align: center;
+    padding: 20px 10px;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer ul li {
+    color: #555; /* Muted gray for links */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .footer ul li:hover {
+    color: #ff385c; /* Airbnb's signature pink */
+  }
+  
+  .footer p {
+    margin: 10px 0 0;
+    font-size: 0.85rem;
+    color: #777; /* Slightly lighter gray */
+  }
+  
+  .footer p a {
+    color: #ff385c; /* Airbnb's signature pink for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer p a:hover {
+    color: #d10048; /* Darker pink for hover */
+  }
+  
