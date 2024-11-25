@@ -1,0 +1,120 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff385c; /* Airbnb's signature color */
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevents logo from shrinking */
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1; /* Allow nav links to take available space */
+  justify-content: center; /* Center the links on larger screens */
+}
+
+/* Navbar Link Items */
+.nav-links li {
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #ffd7dc; /* Soft hover effect */
+}
+
+/* User Menu */
+.user-menu {
+  display: flex;
+  gap: 10px;
+  align-items: center; /* Align button content */
+}
+
+/* User Menu Button */
+.user-menu button {
+  background-color: white;
+  color: #ff385c;
+  border: 1px solid #ff385c;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-menu button:hover {
+  background-color: #ff385c;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  /* Adjust navbar for smaller screens */
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    padding: 10px; /* Adjust padding */
+  }
+
+  /* Logo adjustment on smaller screens */
+  .logo {
+    font-size: 1.2rem; /* Reduce logo size */
+    margin-bottom: 10px; /* Add margin to separate from links */
+  }
+
+  /* Navbar Links for Mobile */
+  .nav-links {
+    flex-direction: column; /* Stack links vertically */
+    gap: 15px;
+    justify-content: flex-start; /* Align items to the left */
+    width: 100%; /* Make links take full width */
+    padding: 0 15px;
+  }
+
+  /* User Menu Button */
+  .user-menu {
+    margin-top: 15px;
+    justify-content: center; /* Center button on mobile */
+  }
+
+  .user-menu button {
+    font-size: 1rem; /* Make button text larger */
+    width: 100%; /* Make button span full width */
+    text-align: center; /* Align text to center */
+  }
+}
+
+/* Media Query for Very Small Mobile Screens (e.g., < 480px) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.1rem; /* Further reduce logo size */
+  }
+
+  .nav-links li {
+    font-size: 0.9rem; /* Smaller text for smaller screens */
+  }
+
+  .user-menu button {
+    font-size: 0.9rem; /* Smaller button text */
+  }
+}
