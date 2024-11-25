@@ -1,0 +1,107 @@
+/* Root container styling */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #ffffff; /* White background for clean look */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px;
+}
+
+/* Logo styling */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms, transform 300ms;
+  cursor: pointer;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #ff385caa); /* Airbnb's pink shadow */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa); /* React logo specific effect */
+}
+
+/* Animation for spinning logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card styling */
+.card {
+  padding: 2em;
+  background-color: #ffffff; /* Card background */
+  border: 1px solid #e0e0e0; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Documentation link styling */
+.read-the-docs {
+  color: #888; /* Muted gray */
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.read-the-docs:hover {
+  color: #ff385c; /* Airbnb's pink for hover */
+}
+
+/* App container styling */
+.app {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7; /* Light gray background */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh; /* Ensures the app fills the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Listings container styling */
+.listings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Limit the width for better alignment */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5em;
+  }
+  .logo {
+    height: 4em;
+    padding: 1em;
+  }
+  .listings {
+    padding: 10px;
+    gap: 10px;
+  }
+}
