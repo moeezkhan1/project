@@ -1,0 +1,31 @@
+.categories {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 20px;
+    background-color: white;
+    gap: 15px;
+    margin: 20px 0;
+    scrollbar-width: none;
+  }
+  
+  .categories::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .category-button {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .category-button.active,
+  .category-button:hover {
+    background-color: #ff385c;
+    color: white;
+    border-color: #ff385c;
+  }
+  
